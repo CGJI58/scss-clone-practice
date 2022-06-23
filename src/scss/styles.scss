@@ -1,6 +1,80 @@
+@import "_variables";
+
 body {
-  background-color: darkcyan;
-  h1 {
-    color: black;
+  width: 1fr;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  header {
+    position: fixed;
+    scroll-behavior: auto;
+    width: 500px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: $white;
+    padding: 93px 72px 0 72px;
+    h1,
+    h2,
+    p {
+      color: $red;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 72px;
+      line-height: 72px;
+      margin-bottom: 120px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+    nav {
+      margin-bottom: 10px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          margin-right: 10px;
+          margin-bottom: 10px;
+          a {
+            padding-bottom: 3px;
+            border-bottom: 1px solid $grey;
+            font-size: 14px;
+            font-weight: 600;
+            color: $grey;
+            line-height: 20px;
+            text-decoration: none;
+          }
+          & :hover {
+            color: black;
+          }
+        }
+      }
+    }
+    footer {
+      small {
+        font-size: 10px;
+        font-weight: 600;
+        color: grey;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    margin-left: 500px;
+    box-sizing: border-box;
+    background-color: $red;
+    .scene-box {
+      width: 100%;
+      height: 1000px;
+    }
   }
 }
